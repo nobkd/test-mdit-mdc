@@ -23,11 +23,9 @@ Here is some [span]{.text-red}!
 The `!` shouldn't be inside the attributes.
 It seems like the closing `}` of props is ignored
 
-## Turning off different Plugins
+## Turning off different Plugins (1)
 
-I'm excluding the only blockComponent part, as there's no block component in my test
-
-### `inlineComponents: false`
+### `inlineComponent: false`
 
 ```html
 <h1>Hello</h1>
@@ -67,10 +65,44 @@ Node.js v20.8.1
 <p><span class="text-red"><span class="text-red">Here is some [span]</span></span>!</p>
 ```
 
-Same as [`inlineProps: false`](#inlineprops-false) but for the `span` block area
+Same issue as [`inlineProps: false`](#inlineprops-false) but for the `span` block area
 
-### `` & ``
+### `blockComponent: false`
+
+Same as [Standard Behavior](#standard-behavior)
+
+## Turning off different Plugins (2)
+
+### `inlineComponent: false` & `inlineProps: false`
+
+Same as [`inlineProps: false`](#inlineprops-false)
+
+### `inlineComponent: false` & `inlineSpan: false`
+
+Same as [`inlineComponent: false`](#inlinecomponent-false) and [`inlineSpan: false`](#inlinespan-false) combined
+
+### `inlineComponent: false` & `blockComponent`
+
+Same as [`inlineComponent: false`](#inlinecomponent-false)
+
+### `inlineProps: false` & `inlineSpan: false`
 
 ```html
-
+<h1>Hello</h1>
+<p>Hello <strong>World</strong> with <my-component>{.text-red name=&quot;foo&quot;}!</p>
+<p>Here is some [span]{.text-red}!</p>
 ```
+
+Correct result
+
+### `inlineProps: false` & `blockComponent: false`
+
+Same as [`inlineProps: false`](#inlineprops-false)
+
+### `inlineSpan: false` & `blockComponent: false`
+
+Same as [`inlineSpan: false`](#inlinespan-false)
+
+## Turning off different Plugins (3)
+
+<!--TODO-->
