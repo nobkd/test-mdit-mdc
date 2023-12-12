@@ -41,7 +41,7 @@ The inline props seem create some unwritten `span` around the component back to 
 
 ### `inlineProps`
 
-```log
+```js
 /home/path/to/project/test-mdit-mdc/node_modules/markdown-it/lib/ruler.js:198
   if (index === -1) { throw new Error('Parser rule not found: ' + afterName); }
                             ^
