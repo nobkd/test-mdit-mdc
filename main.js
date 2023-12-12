@@ -4,10 +4,10 @@ import pluginMdc from 'markdown-it-mdc'
 const md = new MarkdownIt()
   .use(pluginMdc, {
     syntax: {
-        //inlineComponent: false,
-        //inlineProps: false,
-        //inlineSpan: false,
-        //blockComponent: false,
+      // inlineComponent: false,
+      // inlineProps: false,
+      // inlineSpan: false,
+      // blockComponent: false,
     }
   })
 
