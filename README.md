@@ -1,5 +1,7 @@
 # Testing MarkdownIt MDC
 
+Listing bugs / problems with MarkdownIt MDC
+
 ## Setting up
 
 I use the packages in the current `package-lock.json` and always use the following exact text:
@@ -25,7 +27,7 @@ It seems like the closing `}` of props is ignored
 
 ## Turning off different Plugins (1)
 
-### `inlineComponent: false`
+### `inlineComponent`
 
 ```html
 <h1>Hello</h1>
@@ -35,7 +37,7 @@ It seems like the closing `}` of props is ignored
 
 The inline props create some unwritten `span` around the component back to the last markdown item (here `**`) or the start of a block
 
-### `inlineProps: false`
+### `inlineProps`
 
 ```log
 /home/path/to/project/test-mdit-mdc/node_modules/markdown-it/lib/ruler.js:198
@@ -57,7 +59,7 @@ Error: Parser rule not found: mdc_inline_props
 Node.js v20.8.1
 ```
 
-### `inlineSpan: false`
+### `inlineSpan`
 
 ```html
 <h1>Hello</h1>
@@ -65,27 +67,27 @@ Node.js v20.8.1
 <p><span class="text-red"><span class="text-red">Here is some [span]</span></span>!</p>
 ```
 
-Same issue as [`inlineProps: false`](#inlineprops-false) but for the `span` block area
+Same issue as [`inlineProps`](#inlineprops) but for the `span` block area
 
-### `blockComponent: false`
+### `blockComponent`
 
 Same as [Standard Behavior](#standard-behavior)
 
 ## Turning off different Plugins (2)
 
-### `inlineComponent: false` & `inlineProps: false`
+### `inlineComponent` & `inlineProps`
 
-Same as [`inlineProps: false`](#inlineprops-false)
+Same as [`inlineProps`](#inlineprops)
 
-### `inlineComponent: false` & `inlineSpan: false`
+### `inlineComponent` & `inlineSpan`
 
-Same as [`inlineComponent: false`](#inlinecomponent-false) and [`inlineSpan: false`](#inlinespan-false) combined
+Same as [`inlineComponent`](#inlinecomponent) and [`inlineSpan`](#inlinespan) combined
 
-### `inlineComponent: false` & `blockComponent`
+### `inlineComponent` & `blockComponent`
 
-Same as [`inlineComponent: false`](#inlinecomponent-false)
+Same as [`inlineComponent`](#inlinecomponent)
 
-### `inlineProps: false` & `inlineSpan: false`
+### `inlineProps` & `inlineSpan`
 
 ```html
 <h1>Hello</h1>
@@ -95,14 +97,28 @@ Same as [`inlineComponent: false`](#inlinecomponent-false)
 
 Correct result
 
-### `inlineProps: false` & `blockComponent: false`
+### `inlineProps` & `blockComponent`
 
-Same as [`inlineProps: false`](#inlineprops-false)
+Same as [`inlineProps`](#inlineprops)
 
-### `inlineSpan: false` & `blockComponent: false`
+### `inlineSpan` & `blockComponent`
 
-Same as [`inlineSpan: false`](#inlinespan-false)
+Same as [`inlineSpan`](#inlinespan)
 
 ## Turning off different Plugins (3)
 
-<!--TODO-->
+### `inlineComponent` & `inlineProps` & `blockComponent`
+
+...
+
+### `inlineComponent` & `inlineSpan` & `blockComponent`
+
+...
+
+### `inlineComponent` & `inlineProps` & `inlineSpan`
+
+...
+
+### `inlineSpan` & `inlineProps` & `blockComponent`
+
+...
