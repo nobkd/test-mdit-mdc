@@ -136,13 +136,3 @@ Same as [`inlineComponent` & `inlineSpan`](#inlinecomponent--inlinespan)
 ### `inlineProps` & `inlineSpan` & `blockComponent`
 
 Same as [`inlineProps` & `inlineSpan`](#inlineprops--inlinespan)
-
-## Turning off all Plugins
-
-```html
-<h1>Hello</h1>
-<p>Hello <strong>World</strong> with :my-component{.text-red name=&quot;foo&quot;}!</p>
-<p>Here is some [span]{.text-red}!</p>
-```
-
-Correct, as expected
