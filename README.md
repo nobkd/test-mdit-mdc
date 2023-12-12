@@ -35,7 +35,7 @@ It seems like the closing `}` of props is ignored
 <p>Here is some <span class="text-red">span</span>!</p>
 ```
 
-The inline props create some unwritten `span` around the component back to the last markdown item (here `**`) or the start of a block
+The inline props seem create some unwritten `span` around the component back to the last markdown item (here `**`) or the start of a block
 
 ### `inlineProps`
 
@@ -81,6 +81,12 @@ Same as [`inlineProps`](#inlineprops)
 
 ### `inlineComponent` & `inlineSpan`
 
+```html
+<h1>Hello</h1>
+<p>Hello <strong>World</strong><span class="text-red" name="foo" !="true"> with :my-component</span></p>
+<p><span class="text-red"><span class="text-red">Here is some [span]</span></span>!</p>
+```
+
 Same as [`inlineComponent`](#inlinecomponent) and [`inlineSpan`](#inlinespan) combined
 
 ### `inlineComponent` & `blockComponent`
@@ -107,18 +113,34 @@ Same as [`inlineSpan`](#inlinespan)
 
 ## Turning off different Plugins (3)
 
+### `inlineComponent` & `inlineProps` & `inlineSpan`
+
+```html
+<h1>Hello</h1>
+<p>Hello <strong>World</strong> with :my-component{.text-red name=&quot;foo&quot;}!</p>
+<p>Here is some [span]{.text-red}!</p>
+```
+
+Correct, as no block component is used...
+
 ### `inlineComponent` & `inlineProps` & `blockComponent`
 
-...
+Same as [`inlineProps`](#inlineprops)
 
 ### `inlineComponent` & `inlineSpan` & `blockComponent`
 
-...
+Same as [`inlineComponent` & `inlineSpan`](#inlinecomponent--inlinespan)
 
-### `inlineComponent` & `inlineProps` & `inlineSpan`
+### `inlineProps` & `inlineSpan` & `blockComponent`
 
-...
+Same as [`inlineProps` & `inlineSpan`](#inlineprops--inlinespan)
 
-### `inlineSpan` & `inlineProps` & `blockComponent`
+## Turning off all Plugins
 
-...
+```html
+<h1>Hello</h1>
+<p>Hello <strong>World</strong> with :my-component{.text-red name=&quot;foo&quot;}!</p>
+<p>Here is some [span]{.text-red}!</p>
+```
+
+Correct, as expected
