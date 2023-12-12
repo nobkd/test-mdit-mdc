@@ -14,6 +14,8 @@ Hello **World** with :my-component{.text-red name="foo"}!
 Here is some [span]{.text-red}!
 ```
 
+Problematic is, that there's no block component included and disabling it is therefore not really interesting. I'll probably update all examples some other time, with a block component included.
+
 ## Standard Behavior
 
 ```html
