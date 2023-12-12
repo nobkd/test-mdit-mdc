@@ -27,7 +27,7 @@ Problematic is, that there's no block component included and disabling it is the
 The `!` shouldn't be inside the attributes.
 It seems like the closing `}` of props is ignored
 
-## Turning off different Plugins (1)
+## Turning Off One Plugin at a Time
 
 ### `inlineComponent`
 
@@ -75,7 +75,7 @@ Same issue as [`inlineProps`](#inlineprops) but for the `span` block area
 
 Same as [Standard Behavior](#standard-behavior)
 
-## Turning off different Plugins (2)
+## Turning Off Two Plugins at a Time
 
 ### `inlineComponent` & `inlineProps`
 
@@ -113,7 +113,7 @@ Same as [`inlineProps`](#inlineprops)
 
 Same as [`inlineSpan`](#inlinespan)
 
-## Turning off different Plugins (3)
+## Turning Off Three Plugins at a Time
 
 ### `inlineComponent` & `inlineProps` & `inlineSpan`
 
