@@ -136,3 +136,7 @@ Same as [`inlineComponent` & `inlineSpan`](#inlinecomponent--inlinespan)
 ### `inlineProps` & `inlineSpan` & `blockComponent`
 
 Same as [`inlineProps` & `inlineSpan`](#inlineprops--inlinespan)
+
+## Other issues
+
+If you wan to use nesting you have to use a differenc count of `:` on the nested component than on the un-nested one. This behavior is different from the one on Nuxt MDC, as far as I know.
